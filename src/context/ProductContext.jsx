@@ -11,7 +11,10 @@ export function ProductProvider({ children }) {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const res = await fetch('/api/products');
+                // URL comes from .env files:
+                //  - dev:  /api/products  -> json-server (simulated backend, src/data/db.json)
+                //  - prod: /products.json -> static sample data in public/ so it works on Vercel
+                const res = await fetch(import.meta.env.VITE_API_PRODUCTS);
 
                 if (!res.ok) throw new Error('Failed to fetch products');
 
