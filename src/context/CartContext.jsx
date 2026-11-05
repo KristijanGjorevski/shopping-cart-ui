@@ -46,7 +46,7 @@ export const CartContext = ({ children }) => {
             const item = prev.find((i) => i.id === id)
 
             if (item) {
-                // Dropping to 0 (or below) removes the item instead of leaving a ghost row
+                
                 if (item.qty + qty <= 0) {
                     return prev.filter(i => i.id !== id)
                 }
