@@ -2,6 +2,8 @@
 
 A small shopping cart UI built while learning React (Vite + Tailwind CSS).
 
+**Live demo:** https://shopping-card-ui.vercel.app/
+
 ## Features
 
 - Product catalog loaded from a mock REST API
